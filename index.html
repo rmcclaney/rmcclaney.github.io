@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Richard McClaney · Sr. Strategic Projects Lead</title>
+<meta name="description" content="Richard McClaney, Sr. Strategic Projects Lead turning cross-functional ambitions into repeatable systems across retail, technology, and AI. Chicago, IL." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1b1a18;
+    --ink-2:#4a4640;
+    --ink-3:#6f6a62;
+    --paper:#ece9e2;
+    --paper-2:#f4f1ea;
+    --card:#fbfaf6;
+    --line:#d8d3c8;
+    --line-2:#e4e0d6;
+    --graphite-1:#34343a;
+    --graphite-2:#43424a;
+    --graphite-0:#2a2a2f;
+    --oxblood:#8a2e2a;
+    --oxblood-2:#a5382f;
+    --brass:#a9843f;
+    --on-dark:#ece8e0;
+    --on-dark-2:#b6b1a8;
+    --on-dark-3:#8b877f;
+    --maxw:1120px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Instrument Sans",system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--oxblood);text-decoration:none;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  .eyebrow{
+    font-family:"Space Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--oxblood);
+  }
+
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.05;margin:0;}
+
+  /* ---------- Header / nav ---------- */
+  header.top{
+    position:sticky;top:0;z-index:60;
+    background:color-mix(in srgb, var(--paper) 82%, transparent);
+    backdrop-filter:saturate(1.3) blur(10px);
+    -webkit-backdrop-filter:saturate(1.3) blur(10px);
+    border-bottom:1px solid var(--line-2);
+  }
+  .top-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .wordmark{
+    font-family:"Fraunces",serif;font-weight:600;font-size:1.12rem;letter-spacing:-.01em;
+    color:var(--ink);display:flex;align-items:center;gap:.6ch;cursor:pointer;background:none;border:0;padding:0;
+  }
+  .wordmark .dot{width:7px;height:7px;border-radius:50%;background:var(--oxblood);display:inline-block;margin-bottom:2px;}
+  nav.tabs{display:flex;gap:2px;}
+  .tab-btn{
+    font-family:"Space Mono",monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;
+    background:none;border:0;color:var(--ink-3);cursor:pointer;padding:9px 13px;border-radius:7px;
+    position:relative;transition:color .25s var(--ease),background .25s var(--ease);
+  }
+  .tab-btn:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 5%,transparent);}
+  .tab-btn[aria-selected="true"]{color:var(--ink);}
+  .tab-btn[aria-selected="true"]::after{
+    content:"";position:absolute;left:13px;right:13px;bottom:2px;height:2px;background:var(--oxblood);border-radius:2px;
+  }
+  .tab-btn:focus-visible{outline:2px solid var(--oxblood);outline-offset:2px;}
+
+  /* ---------- Panels ---------- */
+  .panel{display:none;animation:rise .5s var(--ease) both;}
+  .panel.active{display:block;}
+  @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 80% at 30% 0%, rgba(0,0,0,.28), transparent 60%),
+      linear-gradient(155deg,var(--graphite-2) 0%,var(--graphite-1) 45%,var(--graphite-0) 100%);
+    color:var(--on-dark);
+  }
+  .hero-inner{
+    max-width:var(--maxw);margin:0 auto;padding:0 28px;
+    display:grid;grid-template-columns:1.05fr .95fr;align-items:end;gap:20px;min-height:clamp(420px,62vh,600px);
+  }
+  .hero-copy{padding:64px 0 60px;}
+  .hero .eyebrow{color:#e0a89a;}
+  .hero h1{
+    color:#fbf8f2;font-size:clamp(2.9rem,7.4vw,5.6rem);font-weight:600;margin:.28em 0 .1em;
+    letter-spacing:-.02em;
+  }
+  .hero .role{
+    font-family:"Fraunces",serif;font-style:italic;font-weight:400;
+    color:var(--on-dark-2);font-size:clamp(1.05rem,2.2vw,1.4rem);margin-bottom:1.15rem;
+  }
+  .hero .lead{
+    color:var(--on-dark);max-width:34ch;font-size:1.08rem;line-height:1.55;
+  }
+  .hero .lead b{color:#fbf8f2;font-weight:600;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+  .btn{
+    font-family:"Space Mono",monospace;font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;
+    padding:11px 17px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:.22s var(--ease);
+    display:inline-flex;align-items:center;gap:.6ch;
+  }
+  .btn-primary{background:var(--oxblood);color:#fbf5ee;border-color:var(--oxblood);}
+  .btn-primary:hover{background:var(--oxblood-2);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:var(--on-dark);border-color:rgba(255,255,255,.22);}
+  .btn-ghost:hover{border-color:rgba(255,255,255,.5);transform:translateY(-1px);}
+  .btn:focus-visible{outline:2px solid #e0a89a;outline-offset:2px;}
+
+  .hero-photo{position:relative;align-self:end;min-height:100%;display:flex;align-items:flex-end;justify-content:center;}
+  .hero-photo img{
+    width:100%;max-width:520px;object-fit:cover;object-position:center top;
+    filter:saturate(1.02) contrast(1.02);
+  }
+  /* feather the photo's left edge into the graphite so he sits *in* the page */
+  .hero-photo::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+    background:linear-gradient(90deg,var(--graphite-1) 0%,rgba(52,52,58,0) 20%);
+  }
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+    background:linear-gradient(180deg,rgba(52,52,58,.35) 0%,transparent 22%);
+  }
+
+  /* ---------- Generic section header ---------- */
+  .sec-head{padding:66px 0 8px;}
+  .sec-head h2{font-size:clamp(2rem,4.5vw,3rem);margin:.35em 0 .35em;}
+  .sec-head p.kicker{color:var(--ink-2);max-width:56ch;font-size:1.06rem;margin:0;}
+
+  /* ---------- About body ---------- */
+  .about-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:56px;padding:20px 0 84px;}
+  .prose p{margin:0 0 1.05em;color:var(--ink-2);font-size:1.08rem;}
+  .prose p b{color:var(--ink);font-weight:600;}
+  .prose .drop{font-size:1.16rem;color:var(--ink);}
+  .now-tag{
+    display:inline-flex;align-items:center;gap:.7ch;font-family:"Space Mono",monospace;
+    font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);
+    background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;margin-bottom:22px;
+  }
+  .pulse{width:7px;height:7px;border-radius:50%;background:var(--oxblood);position:relative;}
+  .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--oxblood);opacity:.5;animation:pulse 2.4s var(--ease) infinite;}
+  @keyframes pulse{0%{transform:scale(.6);opacity:.6;}100%{transform:scale(1.7);opacity:0;}}
+
+  .side-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 26px 8px;
+    position:sticky;top:88px;
+  }
+  .side-card h3{font-size:1.25rem;margin-bottom:2px;}
+  .side-card .sub{font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oxblood);margin-bottom:16px;}
+  .fact{display:flex;gap:14px;padding:13px 0;border-top:1px solid var(--line-2);}
+  .fact:first-of-type{border-top:0;}
+  .fact .ico{font-size:1.15rem;line-height:1.4;filter:grayscale(.15);}
+  .fact .txt{font-size:.98rem;color:var(--ink-2);}
+  .fact .txt b{color:var(--ink);font-weight:600;}
+
+  /* ---------- Work ---------- */
+  .work-list{padding:8px 0 88px;display:grid;gap:18px;}
+  .work-item{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    display:grid;grid-template-columns:220px 1fr;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+  }
+  .work-item:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(40,20,15,.5);border-color:var(--oxblood);}
+  .work-metric{
+    background:linear-gradient(160deg,var(--graphite-2),var(--graphite-0));color:var(--on-dark);
+    padding:26px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;
+  }
+  .work-metric .num{font-family:"Space Mono",monospace;font-weight:700;font-size:2.35rem;color:#f0cabf;line-height:1;letter-spacing:-.02em;}
+  .work-metric .num.small{font-size:1.7rem;}
+  .work-metric .cap{font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;color:var(--on-dark-2);margin-top:10px;line-height:1.5;}
+  .work-body{padding:26px 28px;}
+  .work-body .meta{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:9px;}
+  .work-body .meta .co{color:var(--oxblood);}
+  .work-body h3{font-size:1.32rem;margin-bottom:8px;}
+  .work-body p{margin:0;color:var(--ink-2);font-size:1.02rem;}
+  .work-body .sub-metric{margin-top:12px;font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.05em;color:var(--ink-3);}
+  .work-body .sub-metric b{color:var(--ink);}
+
+  /* ---------- Press ---------- */
+  .press-grid{padding:12px 0 88px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .press-card{
+    display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px 24px 22px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+  }
+  .press-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(40,20,15,.45);border-color:var(--oxblood);}
+  .press-src{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .press-src .pub{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);font-weight:700;}
+  .press-src .yr{font-family:"Space Mono",monospace;font-size:.7rem;color:var(--ink-3);}
+  .press-card h3{font-size:1.22rem;margin-bottom:10px;}
+  .press-card p{margin:0 0 18px;color:var(--ink-2);font-size:.98rem;flex:1;}
+  .press-foot{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--line-2);}
+  .role-tag{font-family:"Space Mono",monospace;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px 10px;}
+  .read-link{font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--oxblood);display:inline-flex;align-items:center;gap:.4ch;}
+  .read-link .arw{transition:transform .25s var(--ease);}
+  .press-card:hover .read-link .arw{transform:translateX(4px);}
+
+  /* ---------- Resume ---------- */
+  .cv{padding:20px 0 96px;display:grid;grid-template-columns:1fr;gap:0;}
+  .cv-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:0 0 30px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+  .cv-contact{font-family:"Space Mono",monospace;font-size:.82rem;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:8px 20px;}
+  .cv-contact a{color:var(--ink-2);}
+  .cv-contact a:hover{color:var(--oxblood);}
+  .cv-block{margin-bottom:40px;}
+  .cv-label{font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oxblood);margin-bottom:18px;}
+  .cv-summary{font-size:1.1rem;color:var(--ink-2);max-width:74ch;}
+  .job{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line-2);}
+  .job:first-of-type{border-top:0;padding-top:4px;}
+  .job .when{font-family:"Space Mono",monospace;font-size:.74rem;color:var(--ink-3);letter-spacing:.03em;}
+  .job .when .yr{display:block;color:var(--ink);font-weight:700;margin-top:3px;}
+  .job h3{font-size:1.2rem;margin-bottom:2px;}
+  .job .co{font-family:"Space Mono",monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--oxblood);margin-bottom:6px;}
+  .job .role-note{font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.03em;color:var(--ink-3);margin-bottom:12px;}
+  .job ul{margin:0;padding-left:0;list-style:none;}
+  .job li{position:relative;padding-left:20px;margin-bottom:9px;color:var(--ink-2);font-size:1rem;}
+  .job li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:1px;background:var(--oxblood);transform:rotate(45deg);}
+  .earlier{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 40px;}
+  .earlier .e-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--line-2);font-size:.98rem;}
+  .earlier .e-row .r{color:var(--ink);font-weight:600;}
+  .earlier .e-row .c{font-family:"Space Mono",monospace;font-size:.72rem;color:var(--ink-3);white-space:nowrap;}
+  .skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .skill-col h4{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin:0 0 10px;}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;}
+  .chip{font-size:.82rem;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);border-radius:7px;padding:5px 10px;}
+  .edu{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .edu .deg{font-size:1.05rem;color:var(--ink);font-weight:600;}
+  .edu .sch{color:var(--ink-2);}
+  .edu .yr{font-family:"Space Mono",monospace;font-size:.74rem;color:var(--ink-3);}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--graphite-0);color:var(--on-dark);margin-top:0;}
+  .foot-inner{max-width:var(--maxw);margin:0 auto;padding:54px 28px;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center;}
+  .foot-inner h3{font-size:1.6rem;color:#fbf8f2;}
+  .foot-inner .sub{color:var(--on-dark-3);font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-top:6px;}
+  .foot-links{display:flex;gap:12px;flex-wrap:wrap;}
+  .foot-links a{color:var(--on-dark);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:10px 15px;font-family:"Space Mono",monospace;font-size:.74rem;letter-spacing:.06em;transition:.22s var(--ease);}
+  .foot-links a:hover{border-color:rgba(255,255,255,.55);transform:translateY(-1px);}
+  .foot-note{max-width:var(--maxw);margin:0 auto;padding:0 28px 30px;color:var(--on-dark-3);font-size:.8rem;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    nav.tabs{gap:0;}
+    .tab-btn{padding:9px 9px;font-size:.68rem;}
+    .hero-inner{grid-template-columns:1fr;gap:0;min-height:0;}
+    .hero-copy{padding:44px 0 24px;}
+    .hero-photo{max-width:360px;margin:0 auto;}
+    .hero-photo::before{background:linear-gradient(180deg,var(--graphite-1) 0%,rgba(52,52,58,0) 16%);}
+    .about-grid{grid-template-columns:1fr;gap:30px;}
+    .side-card{position:static;}
+    .work-item{grid-template-columns:1fr;}
+    .work-metric{flex-direction:row;align-items:baseline;gap:14px;padding:20px 24px;}
+    .work-metric .cap{margin-top:0;}
+    .press-grid{grid-template-columns:1fr;}
+    .job{grid-template-columns:1fr;gap:6px;}
+    .earlier{grid-template-columns:1fr;}
+    .skill-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:560px){
+    .wrap,.hero-inner,.foot-inner,.foot-note{padding-left:20px;padding-right:20px;}
+    .wordmark{font-size:1rem;}
+    .skill-grid{grid-template-columns:1fr;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <button class="wordmark" data-tab="about" aria-label="Home">
+      <span class="dot"></span> Richard McClaney
+    </button>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab-btn" role="tab" data-tab="about" aria-selected="true">About</button>
+      <button class="tab-btn" role="tab" data-tab="work" aria-selected="false">Work</button>
+      <button class="tab-btn" role="tab" data-tab="press" aria-selected="false">Press</button>
+      <button class="tab-btn" role="tab" data-tab="resume" aria-selected="false">Résumé</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ========================= ABOUT ========================= -->
+<section class="panel active" id="about" role="tabpanel">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Sr. Strategic Projects Lead · Chicago, IL</span>
+        <h1>Richard<br>McClaney</h1>
+        <div class="role">The connective tissue between strategy and execution.</div>
+        <p class="lead">Fifteen-plus years turning big, cross-functional ambitions into systems that actually run across <b>retail</b>, <b>technology</b>, and now <b>AI</b>.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" data-tab="work">See the work</button>
+          <button class="btn btn-ghost" data-tab="resume">Read the résumé</button>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="richard.jpg" alt="Portrait of Richard McClaney in a black leather jacket, seated against a graphite backdrop" />
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="prose">
+        <span class="now-tag"><span class="pulse"></span> Currently at Turing, leading AI model evaluation for EKW</span>
+        <p class="drop">I'm the person teams call when a big initiative needs to become something repeatable. For most of my career that's meant standing in the gap between business goals and technical delivery, translating one into the other and building the cadence, metrics, and processes that keep complicated teams pulling in the same direction.</p>
+        <p>I've led large-scale programs for <b>Fortune 50 and 500</b> companies, worked directly with <b>Senior VPs and C-suite leaders</b>, and spent years learning retail from the shelf up, from space planning to merchandising to category strategy, before carrying that operator's instinct into technology consulting and, most recently, into AI.</p>
+        <p>Today, as <b>Sr. Strategic Projects Lead</b> for EKW at Turing, I run the expert teams and quality systems behind large-scale AI model evaluation on real-world, agentic retail tasks. It's the same job I've always done: align people, define the standard, and build the machine that measures it, now pointed at a brand-new frontier.</p>
+        <p>I think of myself as the organizational glue, the person who keeps a complicated effort moving in one direction.</p>
+      </div>
+
+      <aside class="side-card" aria-label="Off the clock">
+        <h3>Off the clock</h3>
+        <div class="sub">The unabridged version</div>
+        <div class="fact"><span class="ico">🏙️</span><span class="txt"><b>Chicago, born and raised,</b> and loyal to a fault. Go Bears, Bulls, and Cubs.</span></div>
+        <div class="fact"><span class="ico">🍜</span><span class="txt"><b>I travel to eat.</b> New cities, new restaurants, whatever's actually good.</span></div>
+        <div class="fact"><span class="ico">📷</span><span class="txt"><b>Fell hard for photography</b> a few years back. It's slipped lately, but I'm itching to pick the camera back up.</span></div>
+        <div class="fact"><span class="ico">🎤</span><span class="txt"><b>Always in for a laugh.</b> Comedy shows, ballgames, and a good meal with better company.</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WORK ========================= -->
+<section class="panel" id="work" role="tabpanel">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Selected Work</span>
+      <h2>A few things I've helped build.</h2>
+      <p class="kicker">The throughline: take something ambiguous and high-stakes, and turn it into a system people can actually run. A fuller history lives in the <a href="#" data-tab="resume">résumé</a>.</p>
+    </div>
+
+    <div class="work-list">
+
+      <article class="work-item">
+        <div class="work-metric">
+          <span class="num">15+</span>
+          <span class="cap">Economically viable<br>functions mapped</span>
+        </div>
+        <div class="work-body">
+          <div class="meta"><span class="co">Turing</span> · Sr. Strategic Projects Lead, EKW · 2026–Present</div>
+          <h3>Building AI evaluations around the work that actually matters</h3>
+          <p>I lead cross-functional expert teams that pressure-test AI models on real-world, agentic retail tasks. Rather than lean on off-the-shelf sector taxonomies that leave gaps across materially important work, we map evaluations to 15+ economically viable business functions, so the benchmark reflects the work people are actually paid to do.</p>
+          <div class="sub-metric">Automated and human-expert scoring turns messy evaluations into decisions leadership can act on.</div>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-metric">
+          <span class="num">$1.5B</span>
+          <span class="cap">Inventory reduction<br>delivered</span>
+        </div>
+        <div class="work-body">
+          <div class="meta"><span class="co">Ernst &amp; Young</span> · Manager, Retail Tech Consulting · 2023–2025</div>
+          <h3>A $1.5B inventory reduction for a Fortune 50 pharmacy</h3>
+          <p>Led the Operational Excellence workstream for one of the country's largest retail pharmacy chains. I got out into the field, running store visits and frontline staff interviews, then redesigned the operating processes and the metrics behind them to take $1.5B of inventory out of the system.</p>
+          <div class="sub-metric">Grounded in the field, not the deck: store walks and staff interviews shaped the redesign.</div>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-metric">
+          <span class="num">16</span>
+          <span class="cap">Dev-years of<br>savings identified</span>
+        </div>
+        <div class="work-body">
+          <div class="meta"><span class="co">Amazon</span> · Manager of Program Management, Amazon Go · 2019–2021</div>
+          <h3>Unlocking Amazon's ability to scale its stores</h3>
+          <p>Ran merchandising for Amazon Go Convenience and led the "buy vs. build" analysis behind a bigger question: how to actually scale. The existing tools and systems couldn't support Amazon's brick-and-mortar growth, so I made the data-driven case to bring every format onto one platform, clearing the path to expand and identifying 16 dev-years of savings along the way.</p>
+          <div class="sub-metric"><b>8%</b> reduction in store labor via a weekly revision cadence · team of <b>8</b> managers.</div>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-metric">
+          <span class="num small">0 → 1</span>
+          <span class="cap">Dark-store merchandising,<br>built from scratch</span>
+        </div>
+        <div class="work-body">
+          <div class="meta"><span class="co">Fresh Street</span> · Head of Merchandising · 2021–2022</div>
+          <h3>Launching a dark-store grocery concept from scratch</h3>
+          <p>Joined a venture-backed Chicago startup to stand up merchandising for a dark-store concept, a store built purely for online, pickup-first shopping. I built the whole thing from a blank sheet: assortment, pricing and promotions, planogram rollouts, and the ERP strategy behind it, across digital and physical channels.</p>
+          <div class="sub-metric">Startup, later acquired. Launch partnerships with Uber Eats and Dwell Social.</div>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-metric">
+          <span class="num">150K+</span>
+          <span class="cap">Additional facings<br>secured in one reset</span>
+        </div>
+        <div class="work-body">
+          <div class="meta"><span class="co">Red Bull</span> · Senior Manager, Business Insights · 2016–2018</div>
+          <h3>150,000 more facings in a single reset season</h3>
+          <p>Led market analysis across 15+ national accounts and turned syndicated data into shelf strategy. In one reset season alone, my team secured more than 150,000 additional facings for Red Bull across tracked key accounts, while I mentored a small team and connected sales with category management.</p>
+          <div class="sub-metric">Toolkit: IRi, Nielsen, Numerator, Mintel.</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PRESS ========================= -->
+<section class="panel" id="press" role="tabpanel">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">In the Press</span>
+      <h2>When the work made the news.</h2>
+      <p class="kicker">Coverage of businesses and initiatives I've been part of, from Amazon's cashierless stores to a Chicago grocery startup rethinking the weekly run.</p>
+    </div>
+
+    <div class="press-grid">
+
+      <article class="press-card">
+        <div class="press-src"><span class="pub">Grocery Dive</span><span class="yr">2022</span></div>
+        <h3>Amazon Go's next act: the suburbs</h3>
+        <p>Reporting on Amazon taking its Just Walk Out convenience format beyond dense downtowns and into suburban markets, the brick-and-mortar business I led merchandising for at Amazon Go.</p>
+        <div class="press-foot">
+          <span class="role-tag">Amazon Go</span>
+          <a class="read-link" href="https://www.grocerydive.com/news/amazon-go-convenience-stores-are-headed-to-suburbia/617628/" target="_blank" rel="noopener">Read <span class="arw">→</span></a>
+        </div>
+      </article>
+
+      <article class="press-card">
+        <div class="press-src"><span class="pub">CNBC</span><span class="yr">2021</span></div>
+        <h3>A cashierless Starbucks, powered by Amazon Go</h3>
+        <p>A look inside the first Starbucks pickup café running Amazon's Go technology in midtown Manhattan, part of the frictionless-retail ecosystem I worked within during my time at Amazon Go.</p>
+        <div class="press-foot">
+          <span class="role-tag">Amazon Go</span>
+          <a class="read-link" href="https://www.cnbc.com/2021/11/18/starbucks-opens-pickup-store-with-amazon-go-technology-in-manhattan.html" target="_blank" rel="noopener">Read <span class="arw">→</span></a>
+        </div>
+      </article>
+
+      <article class="press-card">
+        <div class="press-src"><span class="pub">Chicago Bus. Journal</span><span class="yr">2021</span></div>
+        <h3>Chicago's Fresh Street lands $4M to rethink grocery pickup</h3>
+        <p>The seed round behind Fresh Street, the online-only, pickup-first grocery concept I joined as Head of Merchandising to build the assortment and merchandising strategy from scratch.</p>
+        <div class="press-foot">
+          <span class="role-tag">Fresh Street</span>
+          <a class="read-link" href="https://www.bizjournals.com/chicago/inno/stories/fundings/2021/10/21/fresh-street-grocery-pickup-4m.html" target="_blank" rel="noopener">Read <span class="arw">→</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================= RESUME ========================= -->
+<section class="panel" id="resume" role="tabpanel">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Curriculum Vitae</span>
+      <h2>Richard C. McClaney</h2>
+    </div>
+
+    <div class="cv">
+      <div class="cv-top">
+        <div class="cv-contact">
+          <span>Chicago, IL</span>
+          <a href="mailto:Richard.McClaney@gmail.com">Richard.McClaney@gmail.com</a>
+          <a href="#" data-linkedin>LinkedIn</a>
+        </div>
+        <a class="btn btn-primary" href="Richard_McClaney_Resume_Turing.pdf" target="_blank" rel="noopener" download>↓ Download PDF</a>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-label">Summary</div>
+        <p class="cv-summary">Strategic program leader with 15+ years driving operational excellence, cross-functional orchestration, and technology-enabled transformation across retail and technology organizations. Proven managing large-scale initiatives for Fortune 50/500 companies, aligning strategic planning with execution, and leveraging AI-driven workflows to enhance organizational capability, influencing senior leadership up to the Senior VP and C-suite level, and serving as the organizational glue across business and technical teams.</p>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-label">Experience</div>
+
+        <div class="job">
+          <div class="when"><span class="yr">Jan 2026 – Present</span></div>
+          <div>
+            <h3>Sr. Strategic Projects Lead, EKW</h3>
+            <div class="co">Turing</div>
+            <div class="role-note">Contract Jan–Jul 2026; full-time since Aug 2026.</div>
+            <ul>
+              <li>Lead cross-functional teams of domain experts executing AI model-validation initiatives on real-world agentic retail tasks requiring 7–10 hours of sustained effort per task cycle.</li>
+              <li>Partnered with engineering to define program requirements and implement standardized evaluation rubrics (100–200 criteria), establishing an automated + human-expert scoring methodology to measure and communicate model performance to leadership.</li>
+              <li>Directed end-to-end QA and operational cadence, defining benchmark standards and driving adherence to AHT performance targets as the connective tissue between experts and program leadership.</li>
+              <li>Contributed to the design of AI-driven reinforcement-learning workflows, helping architect an RL training environment that improved model optimization within the evaluation pipeline.</li>
+              <li>Designed and deployed a scalable onboarding and change-management program — training materials, reference guides, hands-on enablement — reducing new-expert ramp-up time.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="when"><span class="yr">Aug 2023 – Nov 2025</span></div>
+          <div>
+            <h3>Manager, Retail Technology Consulting</h3>
+            <div class="co">Ernst &amp; Young</div>
+            <ul>
+              <li>Drove strategic planning and execution of the Operational Excellence workstream for a Fortune 50 retail pharmacy chain, delivering a $1.5B inventory-reduction initiative through data-driven metrics design and streamlined processes.</li>
+              <li>Developed AI training content (EY.q) on Blue Yonder modules, accelerating system-specific implementation responses.</li>
+              <li>Led a cross-functional PMO (hybrid-agile) implementing Blue Yonder merchandising solutions for a Fortune 500 client across four product areas, balancing customization vs. standardization.</li>
+              <li>Led strategic planning workshops with C-suite (CIO) stakeholders to define technology roadmaps, anticipating organizational needs 2–3 quarters ahead.</li>
+              <li>Designed and delivered change-management programs achieving 100% adoption and measurable efficiency gains; managed governance from requirements and RFP through risk, testing, training, and rollout.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="when"><span class="yr">Oct 2021 – Nov 2022</span></div>
+          <div>
+            <h3>Head of Merchandising</h3>
+            <div class="co">Fresh Street</div>
+            <ul>
+              <li>Startup, later acquired — led merchandising strategy across e-commerce and brick-and-mortar channels.</li>
+              <li>Developed end-to-end merchandising strategy, defining priorities for customer acquisition and retention post-launch across digital and physical channels.</li>
+              <li>Implemented repeatable processes for planogram rollouts — assortment changes, pricing promotions, calendar-driven activities — driving operational standardization.</li>
+              <li>Orchestrated partnerships with platforms including Uber Eats and Dwell Social to launch new offerings; built merchandising-systems technology strategy to maximize ERP efficiency.</li>
+              <li>Used data-driven insights and A/B testing to continuously improve digital conversion.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="when"><span class="yr">Mar 2019 – Oct 2021</span></div>
+          <div>
+            <h3>Manager of Program Management</h3>
+            <div class="co">Amazon</div>
+            <ul>
+              <li>Led the "buy vs. build" analysis for Amazon Go Convenience, presenting recommendations that identified 16 dev-years of savings by integrating Amazon brick-and-mortar formats onto Blue Yonder.</li>
+              <li>Led Amazon Go Convenience's Merchandising department — building, managing, and scaling a team of 8 managers across tech and non-tech teams.</li>
+              <li>Introduced a "planogram standardization" methodology, driving automation that saved 200+ labor hours annually.</li>
+              <li>Established a weekly business rhythm (revision calendar) that reduced store labor by 8%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="when"><span class="yr">May 2016 – May 2018</span></div>
+          <div>
+            <h3>Senior Manager, Business Insights</h3>
+            <div class="co">Red Bull</div>
+            <ul>
+              <li>Drove market analysis and insights across 15+ national accounts/divisions, communicating results to senior leadership to enhance market presence and shelf position.</li>
+              <li>Mentored 3 direct reports while driving collaboration across sales and category-management teams.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-label">Earlier Experience</div>
+        <div class="earlier">
+          <div class="e-row"><span class="r">Merchandising Manager</span><span class="c">Harbor Freight · 2014–16</span></div>
+          <div class="e-row"><span class="r">Manager, Space &amp; Presentation</span><span class="c">Target · 2012–14</span></div>
+          <div class="e-row"><span class="r">Sr. Business Analyst (NSO)</span><span class="c">Target · 2010–12</span></div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-label">Education</div>
+        <div class="edu">
+          <span class="deg">B.S., Business &amp; Administration, Marketing</span>
+          <span class="sch">Southern Illinois University – Carbondale</span>
+          <span class="yr">2009</span>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-label">Skills &amp; Tools</div>
+        <div class="skill-grid">
+          <div class="skill-col">
+            <h4>Program &amp; PM</h4>
+            <div class="chips"><span class="chip">Strategic Planning</span><span class="chip">Cross-Functional Orchestration</span><span class="chip">PMO (Hybrid-Agile)</span><span class="chip">Change Management</span><span class="chip">Stakeholder Mgmt</span><span class="chip">Cadence Design</span><span class="chip">RFP / Vendor Selection</span></div>
+          </div>
+          <div class="skill-col">
+            <h4>Technology</h4>
+            <div class="chips"><span class="chip">Blue Yonder</span><span class="chip">JIRA</span><span class="chip">Confluence</span><span class="chip">Oracle NetSuite</span><span class="chip">Apollo Space Planning</span><span class="chip">SQL</span><span class="chip">AWS (foundational)</span><span class="chip">AI/ML Eval Frameworks</span></div>
+          </div>
+          <div class="skill-col">
+            <h4>Data &amp; Analytics</h4>
+            <div class="chips"><span class="chip">IRi</span><span class="chip">Nielsen</span><span class="chip">Numerator</span><span class="chip">Mintel</span><span class="chip">Market Analysis</span><span class="chip">KPI Design</span><span class="chip">A/B Testing</span></div>
+          </div>
+          <div class="skill-col">
+            <h4>Productivity</h4>
+            <div class="chips"><span class="chip">Excel (Advanced)</span><span class="chip">PowerPoint</span><span class="chip">Access</span><span class="chip">Photoshop</span><span class="chip">AutoCAD</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <h3>Let's talk.</h3>
+      <div class="sub">Chicago, IL · open to interesting problems</div>
+    </div>
+    <div class="foot-links">
+      <a href="mailto:Richard.McClaney@gmail.com">Email</a>
+      <a href="#" data-linkedin>LinkedIn</a>
+      <a href="Richard_McClaney_Resume_Turing.pdf" target="_blank" rel="noopener">Résumé PDF</a>
+    </div>
+  </div>
+  <div class="foot-note">© <span id="yr"></span> Richard McClaney. Built as a personal site.</div>
+</footer>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-tab]'));
+  var panels = {
+    about: document.getElementById('about'),
+    work: document.getElementById('work'),
+    press: document.getElementById('press'),
+    resume: document.getElementById('resume')
+  };
+  var navBtns = Array.prototype.slice.call(document.querySelectorAll('.tab-btn'));
+
+  function activate(name, push){
+    if(!panels[name]) name = 'about';
+    Object.keys(panels).forEach(function(k){
+      panels[k].classList.toggle('active', k===name);
+    });
+    navBtns.forEach(function(b){
+      b.setAttribute('aria-selected', b.dataset.tab===name ? 'true':'false');
+    });
+    window.scrollTo({top:0, behavior: push ? 'auto':'auto'});
+    if(push){
+      try{ history.replaceState(null,'','#'+name); }catch(e){}
+    }
+  }
+
+  tabs.forEach(function(el){
+    el.addEventListener('click', function(e){
+      // allow the LinkedIn placeholder + external links to behave normally
+      if(el.hasAttribute('data-linkedin')) return;
+      e.preventDefault();
+      activate(el.dataset.tab, true);
+    });
+  });
+
+  // keyboard arrows across the top nav
+  var tablist = document.querySelector('nav.tabs');
+  tablist.addEventListener('keydown', function(e){
+    if(e.key!=='ArrowRight' && e.key!=='ArrowLeft') return;
+    var i = navBtns.findIndex(function(b){return b.getAttribute('aria-selected')==='true';});
+    i += (e.key==='ArrowRight'?1:-1);
+    if(i<0) i=navBtns.length-1; if(i>=navBtns.length) i=0;
+    navBtns[i].focus();
+    activate(navBtns[i].dataset.tab, true);
+  });
+
+  var start = (location.hash||'').replace('#','');
+  activate(start||'about', false);
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
